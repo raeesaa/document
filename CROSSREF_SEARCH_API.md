@@ -598,9 +598,12 @@ Data from `category-name`(Category), `type-name`(Type), `published`(Year), `cont
 
 ![](https://dl-web.dropbox.com/get/Chorus/facets.png?_subject_uid=294139901&w=AABKmDusl5GyDkQQt-Ig5ncjQJRIJhwSOaRvuvrvR66UTA)
 
-Following are the remaining facets which are not rendered in search results page:
 
-1. `license`
+### Data returned by `/funders/:funders_id/works` API not used in search application:
+
+Following are the facets returned by crossRef API not rendered in search results page:
+
+1. `license`:
 	
      	 "license": {
          	 "value-count": 16,
@@ -612,7 +615,7 @@ Following are the remaining facets which are not rendered in search results page
               }	
        	} 
 
-2. `archive`
+2. `archive`:
 
       	"archive": {
            "value-count": 3,
@@ -622,6 +625,27 @@ Following are the remaining facets which are not rendered in search results page
               "CLOCKSS": 124
             }
         }
-3. `issn`
-4. `orcid`
+        
+3. `issn`:
+	
+     	  "issn": {
+          "value-count": 20,
+          "values": {
+            "http:\/\/id.crossref.org\/	issn\/1079-7114": 575,
+            "http:\/\/id.crossref.org\/issn\/0031-9007": 575,
+			.............
+            .............
+            }
+          }
 
+4. `orcid`
+	
+    	"orcid": {
+        "value-count": 20,
+        "values": {
+          "http:\/\/orcid.org\/0000-0002-8845-9400": 2,
+          "http:\/\/orcid.org\/0000-0002-1487-3182": 1,
+          ..............
+          ..............
+   		  }
+        }
