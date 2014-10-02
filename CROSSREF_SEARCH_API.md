@@ -60,101 +60,7 @@ Here, items is an array of agency names. These agency names are dispayed in jque
 
 #### US Federal Only Checked:
 
-US only funders are queried from Funder IDS application which queries crossref API for some top level funders. The crossref API called is:
-
-http://api.crossref.org/v1/funders/10.13039/:funder_id
-
-Example:
-http://api.crossref.org/v1/funders/10.13039/100000005
-
-The data returned by above API is:
-
-```
-{
-  "status": "ok",
-  "message-type": "funder",
-  "message-version": "1.0.0",
-  "message": {
-    "descendants": [
-      "100000774",
-      "100005713",
-      "100000266",
-      "100005712",
-      "100006370",
-      "100006751",
-      "100006393",
-      "100000181",
-      "100000183",
-      "100005711",
-      "100000182",
-      "100000090",
-      "100000185",
-      "100006394",
-      "100000006",
-      "100006769",
-      "100006753",
-      "100006752",
-      "100007485",
-      "100006965",
-      "100007297"
-    ],
-    "name": "U.S. Department of Defense",
-    "location": "United States",
-    "hierarchy": {
-      "100000005": {
-        "100000006": {"more": true},
-        "100000182": {"more": true},
-        "100000181": {},
-        "100000183": {},
-        "100000185": {},
-        "100000774": {},
-        "100006370": {},
-        "100006394": {},
-        "100005712": {},
-        "100006751": {"more": true},
-        "100006393": {},
-        "100005713": {},
-        "100000090": {},
-        "100005711": {},
-        "100000266": {}
-      }
-    },
-    "hierarchy-names": {
-      "100000005": "U.S. Department of Defense",
-      "100000006": "Office of Naval Research",
-      "100000182": "Medical Research and Materiel Command, U.S. Army Medical Department",
-      "100000181": "Air Force Office of Scientific Research",
-      "100000183": "Army Research Office",
-      "more": null,
-      "100000185": "Defense Advanced Research Projects Agency",
-      "100000774": "Defense Threat Reduction Agency",
-      "100006370": "Small Business Innovation Research",
-      "100006394": "Air Force Material Command",
-      "100005712": "Missile Defense Agency",
-      "100006751": "U.S. Army",
-      "100006393": "Air Force Civil Engineer Center",
-      "100005713": "Office of the Secretary of Defense",
-      "100000090": "Congressionally Directed Medical Research Programs",
-      "100005711": "Defense Logistics Agency",
-      "100000266": "National Geospatial-Intelligence Agency"
-    },
-    "uri": "http:\/\/dx.doi.org\/10.13039\/100000005",
-    "work-count": 259,
-    "descendant-work-count": 3651,
-    "id": "100000005",
-    "tokens": [
-      "us",
-      "department",
-      "of",
-      "defense",
-      "dod"
-    ],
-    "alt-names": [
-      "DOD"
-    ]
-  }
-}
-```
+US only funders are queried from Funder IDS application. Funder IDS application queries crossref API for some top level funders. 
 
 The top-level funders queried by Funder IDs application are:
 [100000133, 100000030, 100000180,
@@ -164,9 +70,15 @@ The top-level funders queried by Funder IDs application are:
  100000161, 100000192, 100000001, 100000014, 100000200, 100000199,
  100000738]
 
-Note: Above top level funders are hardcoded in the code.
+The crossref API called is:
+http://api.crossref.org/v1/funders/10.13039/:funder_id
 
-Funder IDs application makes API call for each of the top level funder and result is processed to form a json array containing funder name and id for each of the funder. Search application makes a call to following API of funders application
+Example:
+http://api.crossref.org/v1/funders/10.13039/100000005
+
+Funder IDs application makes API call for each of the top level funder and result is processed to form a json array containing funder name and id for each of the funder which is then returned to search application.
+
+The funder ID API called by search application is:
 
 `
 /funders_list_ids.json
