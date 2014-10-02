@@ -56,7 +56,9 @@ The data returned by above call is:
 
 Here, items is an array of agency names. These agency names are displayed in jquery dropdown.
 
-![](https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
+
+
+![](https://dl.dropboxusercontent.com/s/v4ef19e5gfun8jx/search_ajax.png?dl=0)
 
 #### US Federal Only Checked:
 
