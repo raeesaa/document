@@ -227,7 +227,7 @@ The `hierarchy` and `hierarchy-names` fields are used for rendering the section 
 ![](https://dl-web.dropbox.com/get/Chorus/hierarchy.png?_subject_uid=294139901&w=AAAdTia3J0FkYu2NehOmmi31N_YmiBnaldUvNYxjphupNQ)
 
 
-<a name="funder_works"></a> #### /funders/:funder_id/works
+####<a name="funder_works"></a> /funders/:funder_id/works
 
 Second call is made to the following API:
 
