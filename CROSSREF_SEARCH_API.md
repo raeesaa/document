@@ -228,29 +228,29 @@ Fields returned in response:
 
 The `hierarchy` and `hierarchy-names` fields are used for rendering the section of search results page highlighted below:
 
-![](https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
+![](https://dl-web.dropbox.com/get/Chorus/hierarchy.png?_subject_uid=294139901&w=AAAdTia3J0FkYu2NehOmmi31N_YmiBnaldUvNYxjphupNQ)
 
 
 - #### /funders/:funder_id/works
 
-The data displayed in search results page is fetched from following API:
+Second call is made to the following API:
 
-http://api.crossref.org/v1/funders/:funder_id/works?facet=t&rows=20&filter=member:15,member:16,member:78,member:179,member:221,member:221,member:263,member:286,member:292,member:301,member:311,member:316,member:317,member:320
+`
+http://api.crossref.org/v1/funders/:funder_id/works
+`
 
-where :funder_id corresponds to the id of funder the search is being performed for.
-
-Query parameters used:
+The query parameters passed with above URL are:
 - facet: Setting facet to 't' enables facet information in response
 - rows: Number of results per request
 - filter: Used for filtering results by speciific field. Results are filtered by crossRef members
 
 
-Example:
+Example API call for funder `100000005`:
 
-http://api.crossref.org/v1/funders/100000016/works?facet=t&rows=20&filter=member:15,member:16,member:78,member:179,member:221,member:221,member:263,member:286,member:292,member:301,member:311,member:316,member:317,member:320
+http://api.crossref.org/v1/funders/100000005/works?facet=t&rows=20&filter=member:15,member:16,member:78,member:179,member:221,member:221,member:263,member:286,member:292,member:301,member:311,member:316,member:317,member:320
 
 
-Sample data returned by above API:
+Data returned by above API call:
 
 ```
 {
@@ -261,7 +261,7 @@ Sample data returned by above API:
     "items": [
       {
         "subtitle": [
-          "Models to Predict Facemask Influenza Contamination"
+          "Effect of Cognitive Load on Decision Making"
         ],
         "subject": [
           "Safety, Risk, Reliability and Quality",
@@ -270,9 +270,9 @@ Sample data returned by above API:
         "issued": {
           "date-parts": [
             [
-              2014,
-              3,
-              4
+              2013,
+              12,
+              19
             ]
           ]
         },
@@ -280,31 +280,31 @@ Sample data returned by above API:
         "prefix": "http:\/\/id.crossref.org\/prefix\/10.1111",
         "author": [
           {
-            "family": "Fisher",
-            "given": "Edward M."
+            "family": "Allen",
+            "given": "Pamela M."
           },
           {
-            "family": "Noti",
-            "given": "John D."
+            "family": "Edwards",
+            "given": "John A."
           },
           {
-            "family": "Lindsley",
-            "given": "William G."
+            "family": "Snyder",
+            "given": "Frank J."
           },
           {
-            "family": "Blachere",
-            "given": "Francoise M."
+            "family": "Makinson",
+            "given": "Kevin A."
           },
           {
-            "family": "Shaffer",
-            "given": "Ronald E."
+            "family": "Hamby",
+            "given": "David M."
           }
         ],
         "container-title": [
           "Risk Analysis"
         ],
-        "reference-count": 63,
-        "page": "1423-1434",
+        "reference-count": 28,
+        "page": "1495-1505",
         "deposited": {
           "date-parts": [
             [
@@ -319,21 +319,21 @@ Sample data returned by above API:
         "funder": [
           {
             "award": [
-              
+              "HDTRA108-10044"
             ],
-            "name": "National Institute for Occupational Safety and Health",
-            "DOI": "10.13039\/100000125"
+            "name": "Defense Threat Reduction Agency",
+            "DOI": "10.13039\/100000774"
           }
         ],
         "title": [
-          "Validation and Application of Models to Predict Facemask Influenza Contamination in Healthcare Settings"
+          "The Effect of Cognitive Load on Decision Making with Graphically Displayed Uncertainty Information"
         ],
         "type": "journal-article",
-        "DOI": "10.1111\/risa.12185",
+        "DOI": "10.1111\/risa.12161",
         "ISSN": [
           "0272-4332"
         ],
-        "URL": "http:\/\/dx.doi.org\/10.1111\/risa.12185",
+        "URL": "http:\/\/dx.doi.org\/10.1111\/risa.12161",
         "source": "CrossRef",
         "publisher": "Wiley-Blackwell",
         "indexed": {
@@ -344,13 +344,15 @@ Sample data returned by above API:
               2
             ]
           ],
-          "timestamp": 1409618168883
+          "timestamp": 1409618028841
         },
         "volume": "34",
         "member": "http:\/\/id.crossref.org\/member\/311"
-      }
-  ],
-    "total-results": 7798,
+      },
+	..............................
+    ..............................
+    ],
+    "total-results": 2830,
     "query": {
       "search-terms": null,
       "start-index": 0
@@ -358,231 +360,231 @@ Sample data returned by above API:
     "items-per-page": 20,
     "facets": {
       "license": {
-        "value-count": 17,
+        "value-count": 16,
         "values": {
-          "http:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/": 1743,
-          "http:\/\/pubs.acs.org\/page\/policy\/authorchoice_termsofuse.html": 1425,
-          "http:\/\/pubs.acs.org\/userimages\/ContentEditor\/1388526979973\/authorchoice_form.pdf": 317,
-          "http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/": 94,
-          "http:\/\/www.sciencemag.org\/site\/feature\/contribinfo\/prep\/license.xhtml": 80,
-          "http:\/\/link.aps.org\/licenses\/aps-default-text-mining-license": 65,
-          "http:\/\/link.aps.org\/licenses\/aps-default-license": 65,
-          "http:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license": 65,
-          "http:\/\/creativecommons.org\/licenses\/by-nc\/3.0": 45,
-          "http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US": 26,
-          "http:\/\/www.acs.org\/content\/acs\/en\/copyright.html": 15,
-          "http:\/\/olabout.wiley.com\/WileyCDA\/Section\/id-815641.html": 10,
-          "http:\/\/www.tandfonline.com\/page\/terms-and-conditions#link2": 7,
-          "http:\/\/pubs.acs.org\/page\/policy\/authorchoice_ccby_termsofuse.html": 5,
-          "http:\/\/www.ieee.org\/publications_standards\/publications\/subscriptions\/info\/licensing.html": 2,
-          "http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background": 2,
+          "http:\/\/link.aps.org\/licenses\/aps-default-text-mining-license": 618,
+          "http:\/\/link.aps.org\/licenses\/aps-default-license": 618,
+          "http:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license": 618,
+          "http:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/": 227,
+          "http:\/\/pubs.acs.org\/page\/policy\/authorchoice_termsofuse.html": 79,
+          "http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US": 66,
+          "http:\/\/www.sciencemag.org\/site\/feature\/contribinfo\/prep\/license.xhtml": 25,
+          "http:\/\/creativecommons.org\/licenses\/by\/4.0\/": 9,
+          "http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/": 7,
+          "http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background": 6,
+          "http:\/\/www.acs.org\/content\/acs\/en\/copyright.html": 5,
+          "http:\/\/pubs.acs.org\/userimages\/ContentEditor\/1388526979973\/authorchoice_form.pdf": 5,
+          "http:\/\/www.ieee.org\/publications_standards\/publications\/subscriptions\/info\/licensing.html": 4,
+          "http:\/\/pubs.acs.org\/page\/policy\/authorchoice_ccby_termsofuse.html": 3,
+          "http:\/\/creativecommons.org\/licenses\/by-nc\/3.0": 2,
           "http:\/\/creativecommons.org\/licenses\/by\/3.0\/": 1
         }
       },
       "archive": {
         "value-count": 3,
         "values": {
-          "DWT": 383,
-          "Portico": 108,
-          "CLOCKSS": 49
+          "Portico": 689,
+          "DWT": 618,
+          "CLOCKSS": 124
         }
       },
       "funder-doi": {
         "value-count": 20,
         "values": {
-          "http:\/\/dx.doi.org\/10.13039\/100000002": 4894,
-          "http:\/\/dx.doi.org\/10.13039\/100000001": 830,
-          "http:\/\/dx.doi.org\/10.13039\/100000057": 608,
-          "http:\/\/dx.doi.org\/10.13039\/100000054": 517,
-          "http:\/\/dx.doi.org\/10.13039\/100000025": 330,
-          "http:\/\/dx.doi.org\/10.13039\/100000071": 209,
-          "http:\/\/dx.doi.org\/10.13039\/100000026": 203,
-          "http:\/\/dx.doi.org\/10.13039\/100000060": 199,
-          "http:\/\/dx.doi.org\/10.13039\/100000052": 191,
-          "http:\/\/dx.doi.org\/10.13039\/100000062": 186,
-          "http:\/\/dx.doi.org\/10.13039\/100000015": 186,
-          "http:\/\/dx.doi.org\/10.13039\/100000097": 175,
-          "http:\/\/dx.doi.org\/10.13039\/100000065": 170,
-          "http:\/\/dx.doi.org\/10.13039\/100000049": 157,
-          "http:\/\/dx.doi.org\/10.13039\/100000066": 153,
-          "http:\/\/dx.doi.org\/10.13039\/100000050": 143,
-          "http:\/\/dx.doi.org\/10.13039\/100000968": 105,
-          "http:\/\/dx.doi.org\/10.13039\/100006108": 95,
-          "http:\/\/dx.doi.org\/10.13039\/100000070": 87,
-          "http:\/\/dx.doi.org\/10.13039\/100000030": 87
+          "http:\/\/dx.doi.org\/10.13039\/100000001": 976,
+          "http:\/\/dx.doi.org\/10.13039\/100000006": 891,
+          "http:\/\/dx.doi.org\/10.13039\/100000181": 852,
+          "http:\/\/dx.doi.org\/10.13039\/100000183": 616,
+          "http:\/\/dx.doi.org\/10.13039\/100000185": 485,
+          "http:\/\/dx.doi.org\/10.13039\/100000015": 297,
+          "http:\/\/dx.doi.org\/10.13039\/100000005": 183,
+          "http:\/\/dx.doi.org\/10.13039\/100000002": 127,
+          "http:\/\/dx.doi.org\/10.13039\/100000774": 85,
+          "http:\/\/dx.doi.org\/10.13039\/100006151": 61,
+          "http:\/\/dx.doi.org\/10.13039\/501100001809": 45,
+          "http:\/\/dx.doi.org\/10.13039\/100000078": 44,
+          "http:\/\/dx.doi.org\/10.13039\/100000928": 33,
+          "http:\/\/dx.doi.org\/10.13039\/100000104": 28,
+          "http:\/\/dx.doi.org\/10.13039\/100000161": 26,
+          "http:\/\/dx.doi.org\/10.13039\/100000165": 19,
+          "http:\/\/dx.doi.org\/10.13039\/100000054": 19,
+          "http:\/\/dx.doi.org\/10.13039\/100000182": 17,
+          "http:\/\/dx.doi.org\/10.13039\/100000090": 17,
+          "http:\/\/dx.doi.org\/10.13039\/100000057": 15
         }
       },
       "issn": {
         "value-count": 20,
         "values": {
-          "http:\/\/id.crossref.org\/issn\/1520-5126": 441,
-          "http:\/\/id.crossref.org\/issn\/0002-7863": 441,
-          "http:\/\/id.crossref.org\/issn\/1520-4995": 290,
-          "http:\/\/id.crossref.org\/issn\/0006-2960": 290,
-          "http:\/\/id.crossref.org\/issn\/0021-9606": 173,
-          "http:\/\/id.crossref.org\/issn\/1520-6882": 146,
-          "http:\/\/id.crossref.org\/issn\/0003-2700": 146,
-          "http:\/\/id.crossref.org\/issn\/1554-8937": 121,
-          "http:\/\/id.crossref.org\/issn\/1554-8929": 121,
-          "http:\/\/id.crossref.org\/issn\/1523-7060": 105,
-          "http:\/\/id.crossref.org\/issn\/1523-7052": 105,
-          "http:\/\/id.crossref.org\/issn\/1520-4804": 99,
-          "http:\/\/id.crossref.org\/issn\/0022-2623": 99,
-          "http:\/\/id.crossref.org\/issn\/1936-086X": 86,
-          "http:\/\/id.crossref.org\/issn\/1936-0851": 86,
-          "http:\/\/id.crossref.org\/issn\/1535-3907": 80,
-          "http:\/\/id.crossref.org\/issn\/1535-3893": 80,
-          "http:\/\/id.crossref.org\/issn\/1095-9203": 80,
-          "http:\/\/id.crossref.org\/issn\/0036-8075": 80,
-          "http:\/\/id.crossref.org\/issn\/1520-5207": 74
+          "http:\/\/id.crossref.org\/issn\/1079-7114": 575,
+          "http:\/\/id.crossref.org\/issn\/0031-9007": 575,
+          "http:\/\/id.crossref.org\/issn\/0003-6951": 410,
+          "http:\/\/id.crossref.org\/issn\/0021-8979": 198,
+          "http:\/\/id.crossref.org\/issn\/0021-9606": 163,
+          "http:\/\/id.crossref.org\/issn\/1077-3118": 104,
+          "http:\/\/id.crossref.org\/issn\/1520-5126": 93,
+          "http:\/\/id.crossref.org\/issn\/0002-7863": 93,
+          "http:\/\/id.crossref.org\/issn\/1530-6992": 69,
+          "http:\/\/id.crossref.org\/issn\/1530-6984": 69,
+          "http:\/\/id.crossref.org\/issn\/1936-086X": 68,
+          "http:\/\/id.crossref.org\/issn\/1936-0851": 68,
+          "http:\/\/id.crossref.org\/issn\/1089-7550": 60,
+          "http:\/\/id.crossref.org\/issn\/1070-6631": 55,
+          "http:\/\/id.crossref.org\/issn\/1932-7455": 48,
+          "http:\/\/id.crossref.org\/issn\/1932-7447": 48,
+          "http:\/\/id.crossref.org\/issn\/1550-235X": 42,
+          "http:\/\/id.crossref.org\/issn\/1098-0121": 42,
+          "http:\/\/id.crossref.org\/issn\/0034-6748": 42,
+          "http:\/\/id.crossref.org\/issn\/1089-7690": 37
         }
       },
       "funder-name": {
         "value-count": 20,
         "values": {
-          "National Institutes of Health": 4895,
-          "National Science Foundation": 832,
-          "National Institute of General Medical Sciences": 608,
-          "National Cancer Institute": 517,
-          "National Institute of Mental Health": 331,
-          "National Institute of Child Health and Human Development": 209,
-          "National Institute on Drug Abuse": 203,
-          "National Institute of Allergy and Infectious Diseases": 200,
-          "NIH Office of the Director": 191,
-          "U.S. Department of Energy": 186,
-          "National Institute of Diabetes and Digestive and Kidney Diseases": 186,
-          "National Center for Research Resources": 177,
-          "National Institute of Neurological Disorders and Stroke": 172,
-          "National Institute on Aging": 165,
-          "National Institute of Environmental Health Sciences": 153,
-          "National Heart, Lung, and Blood Institute": 145,
-          "American Heart Association": 107,
-          "National Center for Advancing Translational Sciences": 96,
-          "National Natural Science Foundation of China": 88,
-          "National Institute of Biomedical Imaging and Bioengineering": 88
+          "National Science Foundation": 977,
+          "Office of Naval Research": 891,
+          "Air Force Office of Scientific Research": 852,
+          "Army Research Office": 616,
+          "Defense Advanced Research Projects Agency": 485,
+          "U.S. Department of Energy": 298,
+          "U.S. Department of Defense": 183,
+          "National Institutes of Health": 127,
+          "Defense Threat Reduction Agency": 85,
+          "Basic Energy Sciences": 61,
+          "National Natural Science Foundation of China": 47,
+          "Division of Materials Research": 44,
+          "Welch Foundation": 33,
+          "National Aeronautics and Space Administration": 28,
+          "National Institute of Standards and Technology": 26,
+          "National Cancer Institute": 19,
+          "Division of Chemistry": 19,
+          "Medical Research and Materiel Command, U.S. Army Medical Department": 17,
+          "Congressionally Directed Medical Research Programs": 17,
+          "National Institute of General Medical Sciences": 15
         }
       },
       "container-title": {
         "value-count": 20,
         "values": {
-          "Journal of the American Chemical Society": 441,
-          "J. Am. Chem. Soc.": 441,
-          "Biochemistry": 290,
-          "The Journal of Chemical Physics": 173,
-          "J. Chem. Phys.": 173,
-          "Analytical Chemistry": 146,
-          "Anal. Chem.": 146,
-          "ACS Chemical Biology": 121,
-          "ACS Chem. Biol.": 121,
-          "Organic Letters": 105,
-          "Org. Lett.": 105,
-          "Journal of Medicinal Chemistry": 99,
-          "J. Med. Chem.": 99,
-          "ACS Nano": 86,
-          "Science": 80,
-          "Journal of Proteome Research": 80,
-          "J. Proteome Res.": 80,
-          "The Journal of Physical Chemistry B": 74,
-          "J. Phys. Chem. B": 74,
-          "Hepatology": 73
+          "Physical Review Letters": 575,
+          "Phys. Rev. Lett.": 575,
+          "Applied Physics Letters": 410,
+          "Appl. Phys. Lett.": 410,
+          "Journal of Applied Physics": 198,
+          "J. Appl. Phys.": 198,
+          "The Journal of Chemical Physics": 163,
+          "J. Chem. Phys.": 163,
+          "Journal of the American Chemical Society": 93,
+          "J. Am. Chem. Soc.": 93,
+          "Nano Letters": 69,
+          "Nano Lett.": 69,
+          "ACS Nano": 68,
+          "Physics of Fluids": 55,
+          "Phys. Fluids": 55,
+          "The Journal of Physical Chemistry C": 48,
+          "J. Phys. Chem. C": 48,
+          "Rev. Sci. Instrum.": 42,
+          "Physical Review B": 42,
+          "Phys. Rev. B": 42
         }
       },
       "published": {
-        "value-count": 12,
+        "value-count": 7,
         "values": {
-          "2014": 6561,
-          "2013": 408,
-          "2011": 367,
-          "2012": 327,
-          "2010": 78,
-          "2015": 39,
-          "2009": 8,
-          "2008": 6,
-          "2007": 1,
-          "2006": 1,
-          "2002": 1,
-          "1978": 1
+          "2014": 1337,
+          "2011": 551,
+          "2012": 530,
+          "2013": 360,
+          "2015": 28,
+          "2010": 20,
+          "2008": 2
         }
       },
       "category-name": {
         "value-count": 20,
         "values": {
-          "Biochemistry": 1543,
-          "Chemistry(all)": 706,
-          "Molecular Biology": 606,
-          "Physical and Theoretical Chemistry": 504,
-          "Colloid and Surface Chemistry": 446,
-          "Catalysis": 442,
-          "Molecular Medicine": 432,
-          "Medicine(all)": 432,
-          "Cell Biology": 369,
-          "Organic Chemistry": 366,
-          "Physics and Astronomy(all)": 328,
-          "Psychiatry and Mental health": 323,
-          "Neurology": 308,
-          "Drug Discovery": 292,
-          "Clinical Neurology": 262,
-          "Genetics": 253,
-          "Pharmacology": 251,
-          "Pharmaceutical Science": 226,
-          "Neuroscience(all)": 224,
-          "Analytical Chemistry": 218
+          "Physics and Astronomy(all)": 1036,
+          "Physics and Astronomy (miscellaneous)": 422,
+          "Physical and Theoretical Chemistry": 311,
+          "Condensed Matter Physics": 277,
+          "Chemistry(all)": 245,
+          "Materials Science(all)": 240,
+          "Biochemistry": 129,
+          "Materials Chemistry": 128,
+          "Electronic, Optical and Magnetic Materials": 128,
+          "Electrical and Electronic Engineering": 114,
+          "Mechanical Engineering": 103,
+          "Colloid and Surface Chemistry": 98,
+          "Catalysis": 97,
+          "Bioengineering": 95,
+          "Engineering(all)": 83,
+          "Surfaces, Coatings and Films": 80,
+          "Applied Mathematics": 62,
+          "Instrumentation": 52,
+          "Computer Science Applications": 51,
+          "Energy(all)": 49
         }
       },
       "source": {
         "value-count": 1,
         "values": {
-          "CrossRef": 7798
+          "CrossRef": 2830
         }
       },
       "orcid": {
         "value-count": 20,
         "values": {
-          "http:\/\/orcid.org\/0000-0001-7916-622X": 3,
-          "http:\/\/orcid.org\/0000-0002-6921-9567": 2,
-          "http:\/\/orcid.org\/0000-0002-6264-2573": 2,
-          "http:\/\/orcid.org\/0000-0002-4064-1924": 2,
-          "http:\/\/orcid.org\/0000-0002-3832-3249": 2,
-          "http:\/\/orcid.org\/0000-0002-0738-8453": 2,
-          "http:\/\/orcid.org\/0000-0001-7112-4009": 2,
-          "http:\/\/orcid.org\/0000-0001-5420-3776": 1,
-          "http:\/\/orcid.org\/0000-0001-5398-3408": 1,
-          "http:\/\/orcid.org\/0000-0001-5388-897X": 1,
+          "http:\/\/orcid.org\/0000-0002-8845-9400": 2,
+          "http:\/\/orcid.org\/0000-0002-1487-3182": 1,
+          "http:\/\/orcid.org\/0000-0002-0774-7583": 1,
+          "http:\/\/orcid.org\/0000-0002-0517-366X": 1,
+          "http:\/\/orcid.org\/0000-0002-0381-1437": 1,
+          "http:\/\/orcid.org\/0000-0002-0012-7963": 1,
+          "http:\/\/orcid.org\/0000-0001-9931-906X": 1,
+          "http:\/\/orcid.org\/0000-0001-9627-9074": 1,
+          "http:\/\/orcid.org\/0000-0001-9076-3551": 1,
+          "http:\/\/orcid.org\/0000-0001-8526-5152": 1,
+          "http:\/\/orcid.org\/0000-0001-8200-1733": 1,
+          "http:\/\/orcid.org\/0000-0001-7622-6477": 1,
+          "http:\/\/orcid.org\/0000-0001-6491-167X": 1,
+          "http:\/\/orcid.org\/0000-0001-6477-2542": 1,
+          "http:\/\/orcid.org\/0000-0001-6470-4689": 1,
+          "http:\/\/orcid.org\/0000-0001-6298-0874": 1,
+          "http:\/\/orcid.org\/0000-0001-6215-6383": 1,
+          "http:\/\/orcid.org\/0000-0001-5984-4409": 1,
           "http:\/\/orcid.org\/0000-0001-5386-3748": 1,
-          "http:\/\/orcid.org\/0000-0001-5372-510X": 1,
-          "http:\/\/orcid.org\/0000-0001-5335-9840": 1,
-          "http:\/\/orcid.org\/0000-0001-5315-401X": 1,
-          "http:\/\/orcid.org\/0000-0001-5218-6722": 1,
-          "http:\/\/orcid.org\/0000-0001-5158-1149": 1,
-          "http:\/\/orcid.org\/0000-0001-5138-3839": 1,
-          "http:\/\/orcid.org\/0000-0001-5059-0211": 1,
-          "http:\/\/orcid.org\/0000-0001-5044-672X": 1,
-          "http:\/\/orcid.org\/0000-0001-5010-7883": 1
+          "http:\/\/orcid.org\/0000-0001-5372-510X": 1
         }
       },
       "publisher-name": {
         "value-count": 11,
         "values": {
-          "Wiley-Blackwell": 3054,
-          "American Chemical Society (ACS)": 2203,
-          "Elsevier BV": 1896,
-          "AIP Publishing": 330,
-          "American Association for the Advancement of Science (AAAS)": 80,
-          "American Physical Society (APS)": 67,
-          "American Psychological Association (APA)": 63,
-          "Institute of Electrical & Electronics Engineers (IEEE)": 49,
-          "Oxford University Press (OUP)": 45,
-          "Informa UK Limited": 9,
-          "Association for Computing Machinery (ACM)": 2
+          "AIP Publishing": 939,
+          "American Physical Society (APS)": 674,
+          "American Chemical Society (ACS)": 621,
+          "Elsevier BV": 257,
+          "Wiley-Blackwell": 188,
+          "Institute of Electrical & Electronics Engineers (IEEE)": 114,
+          "American Association for the Advancement of Science (AAAS)": 25,
+          "Association for Computing Machinery (ACM)": 6,
+          "American Psychological Association (APA)": 3,
+          "Oxford University Press (OUP)": 2,
+          "Informa UK Limited": 1
         }
       },
       "type-name": {
         "value-count": 1,
         "values": {
-          "Journal Article": 7798
+          "Journal Article": 2830
         }
       }
     }
   }
 }
 ```
+
+Feilds returned in response:
+
+- items: Array of works metadata associated with queried `funder_id`
+- total-results: Count of works associated with queried `funder_id`
+- facets: An object containing nested facet objects
