@@ -592,3 +592,36 @@ Feilds returned in response:
 Data from `items` and `total-results` fields are displayed in highlighted section below:
 
 ![](https://dl-web.dropbox.com/get/Chorus/results.png?_subject_uid=294139901&w=AACfXWGFQtDAaaooyR5kAFfzeV1BX0WmTjSzJKRrSQCtPA)
+
+
+Data from `category-name`(Category), `type-name`(Type), `published`(Year), `container-title`(Publication) and `publisher-name`(Publisher) facet fields are displayed in section highlighted below:
+
+![](https://dl-web.dropbox.com/get/Chorus/facets.png?_subject_uid=294139901&w=AABKmDusl5GyDkQQt-Ig5ncjQJRIJhwSOaRvuvrvR66UTA)
+
+Following are the remaining facets which are not rendered in search results page:
+
+1. `license`
+	
+     	 "license": {
+         	 "value-count": 16,
+          	  "values": {
+            	"http:\/\/link.aps.org\/licenses\/aps-default-text-mining-license": 618,
+            	"http:\/\/link.aps.org\/licenses\/aps-default-license": 618,
+            	......
+            	......
+              }	
+       	} 
+
+2. `archive`
+
+      	"archive": {
+           "value-count": 3,
+            "values": {
+              "Portico": 689,
+              "DWT": 618,
+              "CLOCKSS": 124
+            }
+        }
+3. `issn`
+4. `orcid`
+
