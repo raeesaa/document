@@ -226,7 +226,7 @@ Fields returned in response:
 
 The `hierarchy` and `hierarchy-names` fields are used for rendering the section of search results page highlighted below:
 
-![](https://dl-web.dropbox.com/get/Chorus/hierarchy.png?_subject_uid=294139901&w=AAAdTia3J0FkYu2NehOmmi31N_YmiBnaldUvNYxjphupNQ)
+![](https://dl.dropboxusercontent.com/s/f8rk3uxfg56r9q0/hierarchy.png?dl=0)
 
 
 ####/funders/:funder_id/works
@@ -589,12 +589,12 @@ Feilds returned in response:
 
 Data from `items` and `total-results` fields are displayed in highlighted section below:
 
-![](https://dl-web.dropbox.com/get/Chorus/results.png?_subject_uid=294139901&w=AACfXWGFQtDAaaooyR5kAFfzeV1BX0WmTjSzJKRrSQCtPA)
+![](https://dl.dropboxusercontent.com/s/2cye1rc6ne0uwf6/results.png?dl=0)
 
 
 Data from `category-name`(Category), `type-name`(Type), `published`(Year), `container-title`(Publication) and `publisher-name`(Publisher) facet fields are displayed in section highlighted below:
 
-![](https://dl-web.dropbox.com/get/Chorus/facets.png?_subject_uid=294139901&w=AABKmDusl5GyDkQQt-Ig5ncjQJRIJhwSOaRvuvrvR66UTA)
+![](https://dl.dropboxusercontent.com/s/19frezfc5172glf/facets.png?dl=0)
 
 
 ### Data returned by `/funders/:funders_id/works` API not used in search application:
