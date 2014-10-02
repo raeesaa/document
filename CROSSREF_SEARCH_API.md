@@ -587,4 +587,8 @@ Feilds returned in response:
 
 - items: Array of works metadata associated with queried `funder_id`
 - total-results: Count of works associated with queried `funder_id`
-- facets: An object containing nested facet objects
+- facets: An object containing data of facets like `license`, `archive`, `funder-doi`, `issn`, `funder-name`, `container-title`, `published`, `category-name`, `source`, `orcid`, `publisher-name` and `type-name`.
+
+Data from `items` and `total-results` fields are displayed in highlighted section below:
+
+![](https://dl-web.dropbox.com/get/Chorus/results.png?_subject_uid=294139901&w=AACfXWGFQtDAaaooyR5kAFfzeV1BX0WmTjSzJKRrSQCtPA)
