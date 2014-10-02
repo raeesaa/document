@@ -63,6 +63,7 @@ Here, items is an array of agency names. These agency names are dispayed in jque
 US only funders are queried from Funder IDS application. Funder IDS application queries crossref API for some top level funders. 
 
 The top-level funders queried by Funder IDs application are:
+
 [100000133, 100000030, 100000180,
  100000005, 100000015, 100000201,
  100000140, 100000138, 100000139,
@@ -71,9 +72,11 @@ The top-level funders queried by Funder IDs application are:
  100000738]
 
 The crossref API called is:
+
 http://api.crossref.org/v1/funders/10.13039/:funder_id
 
 Example:
+
 http://api.crossref.org/v1/funders/10.13039/100000005
 
 Funder IDs application makes API call for each of the top level funder and result is processed to form a json array containing funder name and id for each of the funder which is then returned to search application.
@@ -117,6 +120,119 @@ Response is then parsed and funder names are displayed in jquery dropdown matchi
 
 ###Search Results Page:
 
+Data is queried from two crossRef APIs and displayed on search results page. The APIs called are:
+
+-  #### /funders/:funder_id
+
+Example API call for funder `100000005`:
+
+`
+http://api.crossref.org/v1/funders/100000005
+`
+
+This call will return following data:
+
+```
+{
+  "status": "ok",
+  "message-type": "funder",
+  "message-version": "1.0.0",
+  "message": {
+    "descendants": [
+      "100000774",
+      "100005713",
+      "100000266",
+      "100005712",
+      "100006370",
+      "100006751",
+      "100006393",
+      "100000181",
+      "100000183",
+      "100005711",
+      "100000182",
+      "100000090",
+      "100000185",
+      "100006394",
+      "100000006",
+      "100006769",
+      "100006753",
+      "100006752",
+      "100007485",
+      "100006965",
+      "100007297"
+    ],
+    "name": "U.S. Department of Defense",
+    "location": "United States",
+    "hierarchy": {
+      "100000005": {
+        "100000006": {"more": true},
+        "100000182": {"more": true},
+        "100000181": {},
+        "100000183": {},
+        "100000185": {},
+        "100000774": {},
+        "100006370": {},
+        "100006394": {},
+        "100005712": {},
+        "100006751": {"more": true},
+        "100006393": {},
+        "100005713": {},
+        "100000090": {},
+        "100005711": {},
+        "100000266": {}
+      }
+    },
+    "hierarchy-names": {
+      "100000005": "U.S. Department of Defense",
+      "100000006": "Office of Naval Research",
+      "100000182": "Medical Research and Materiel Command, U.S. Army Medical Department",
+      "100000181": "Air Force Office of Scientific Research",
+      "100000183": "Army Research Office",
+      "more": null,
+      "100000185": "Defense Advanced Research Projects Agency",
+      "100000774": "Defense Threat Reduction Agency",
+      "100006370": "Small Business Innovation Research",
+      "100006394": "Air Force Material Command",
+      "100005712": "Missile Defense Agency",
+      "100006751": "U.S. Army",
+      "100006393": "Air Force Civil Engineer Center",
+      "100005713": "Office of the Secretary of Defense",
+      "100000090": "Congressionally Directed Medical Research Programs",
+      "100005711": "Defense Logistics Agency",
+      "100000266": "National Geospatial-Intelligence Agency"
+    },
+    "uri": "http:\/\/dx.doi.org\/10.13039\/100000005",
+    "work-count": 260,
+    "descendant-work-count": 3669,
+    "id": "100000005",
+    "tokens": [
+      "us",
+      "department",
+      "of",
+      "defense",
+      "dod"
+    ],
+    "alt-names": [
+      "DOD"
+    ]
+  }
+}
+```
+
+Fields returned in response:
+- descendants: Descendants is an array of all possible sub-organizations of queried funder
+- hierarchy: An object containing ids of direct descendants of queried funder
+- hierarchy-names: An object having id and funder name mapping for direct descendants of queried funder
+- name: Name of queried funder
+- location: Location of queried funder
+
+The `hierarchy` and `hierarchy-names` fields are used for rendering the section of search results page highlighted below:
+
+![](/https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
+
+
+- #### /funders/:funder_id/works
+
 The data displayed in search results page is fetched from following API:
 
 http://api.crossref.org/v1/funders/:funder_id/works?facet=t&rows=20&filter=member:15,member:16,member:78,member:179,member:221,member:221,member:263,member:286,member:292,member:301,member:311,member:316,member:317,member:320
@@ -124,11 +240,10 @@ http://api.crossref.org/v1/funders/:funder_id/works?facet=t&rows=20&filter=membe
 where :funder_id corresponds to the id of funder the search is being performed for.
 
 Query parameters used:
-facet: Setting facet to 't' enables facet information in response
-rows: Number of results per request
-filter: Used for filtering results by specific field
+- facet: Setting facet to 't' enables facet information in response
+- rows: Number of results per request
+- filter: Used for filtering results by speciific field. Results are filtered by crossRef members
 
-The members sent in request as filter parameter were hardcoded in code.
 
 Example:
 
