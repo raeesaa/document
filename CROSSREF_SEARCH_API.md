@@ -64,12 +64,7 @@ US only funders are queried from Funder IDS application. Funder IDS application 
 
 The top-level funders queried by Funder IDs application are:
 
-[100000133, 100000030, 100000180,
- 100000005, 100000015, 100000201,
- 100000140, 100000138, 100000139,
- 100000038, 100000104, 100000002,
- 100000161, 100000192, 100000001, 100000014, 100000200, 100000199,
- 100000738]
+[100000133, 100000030, 100000180, 100000005, 100000015, 100000201, 100000140, 100000138, 100000139, 100000038, 100000104, 100000002, 100000161, 100000192, 100000001, 100000014, 100000200, 100000199, 100000738]
 
 The crossref API called is:
 
@@ -83,9 +78,7 @@ Funder IDs application makes API call for each of the top level funder and resul
 
 The funder ID API called by search application is:
 
-`
-/funders_list_ids.json
-`
+`/funders_list_ids.json`
 
 which returns data of the form:
 
