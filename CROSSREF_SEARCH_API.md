@@ -228,7 +228,7 @@ Fields returned in response:
 
 The `hierarchy` and `hierarchy-names` fields are used for rendering the section of search results page highlighted below:
 
-![](/https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
+![](https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
 
 
 - #### /funders/:funder_id/works
