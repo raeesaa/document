@@ -115,7 +115,10 @@ Response is then parsed and funder names are displayed in jquery dropdown matchi
 
 Data is queried from two crossRef APIs and displayed on search results page. The APIs called are:
 
--  /funders/:funder_id
+-  <a href="#funder">/funders/:funder_id</a>
+- <a href="#funder_works">/funders/:funder_id/works</a>
+
+<a name="funder"></a> ####/fudners/:funder_id
 
 Example API call for funder `100000005`:
 
