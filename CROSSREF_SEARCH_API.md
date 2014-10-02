@@ -115,10 +115,10 @@ Response is then parsed and funder names are displayed in jquery dropdown matchi
 
 Data is queried from two crossRef APIs and displayed on search results page. The APIs called are:
 
--  <a href="#funder">/funders/:funder_id</a>
-- <a href="#funder_works">/funders/:funder_id/works</a>
+-  /funders/:funder_id
+- /funders/:funder_id/works
 
-####<a name="#funder"></a> /fudners/:funder_id
+####/fudners/:funder_id
 
 Example API call for funder `100000005`:
 
@@ -227,7 +227,7 @@ The `hierarchy` and `hierarchy-names` fields are used for rendering the section 
 ![](https://dl-web.dropbox.com/get/Chorus/hierarchy.png?_subject_uid=294139901&w=AAAdTia3J0FkYu2NehOmmi31N_YmiBnaldUvNYxjphupNQ)
 
 
-####<a name="#funder_works"></a> /funders/:funder_id/works
+####/funders/:funder_id/works
 
 Second call is made to the following API:
 
