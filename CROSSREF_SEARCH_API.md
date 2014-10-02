@@ -9,7 +9,7 @@ Following are the crossref APIs being used in Chorus search application:
 
 As user types in text into the search box, ajax calls to following API are made:
 
-http://api.crossref.org/v1/funders?rows=1000&query=<text_entered_by_user>
+http://api.crossref.org/v1/funders?rows=1000&query=[text_entered_by_user]
 
 This API returns an array of funders having queried text in their name.
 
@@ -55,6 +55,8 @@ The data returned by above call is:
 ```
 
 Here, items is an array of agency names. These agency names are dispayed in jquery dropdown.
+
+![](https://dl-web.dropbox.com/get/Chorus/search_ajax.png?_subject_uid=294139901&w=AADY7Y-r2D310IVBqRbsdVYl-IywBM93HgTDiJHIvyEdNQ)
 
 #### US Federal Only Checked:
 
